@@ -4,14 +4,15 @@ const bot = new Discord.Client();
 var prefix = ("+")
 
 bot.on('ready', function() {
-    bot.user.setPressence({game: { name: "[+help] en dévelopement", type: 0}});
-    console.log("Connecté")
-})
+    bot.user.setPresence({ game: { name: "[+help] en dévelopement", type: 0}});
+    console.log("Connected");
+});
 
-bot.login("NDIwNTczNTY3MzMyMjUzNzA3.DYApLQ.dpZR9OAfG7wVcubf0sJglDPkLzQ")
+bot.login("NDIwNTczNTY3MzMyMjUzNzA3.DYAtEA.SXAOXNoAnY2E3XJPQFILfn_OtVU")
 
 bot.on('message', message => {
-    //Système de message
+
+    //Système de message embed 
 
     if (message.content === prefix + "owner"){
         message.reply("Ce bot à été créer par **_Jonathan OrcDrove_**");
@@ -79,5 +80,4 @@ bot.on('message', message => {
         message.channel.sendEmbed(info_embed);
         console.log("Embed Mini-YTB Envoyé !")
     }
-    
-})
+});
